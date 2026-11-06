@@ -8,10 +8,10 @@ export default function BoutonJaime({ label, href, variante }: { label: string, 
 
     const style = aime
         ? "border-red-500 bg-red-500 text-white"
-        : "border-neutral-300 text-black"
+        : "border-neutral-300"
 
     return (
-        <button onClick={() => setAime(!aime)} className="rounded border px-3 py-1 text-sm ${style}">
+        <button onClick={() => setAime(!aime)} className={`rounded border px-3 py-1 text-sm ${style}`}>
             {aime ? "J'aime" : "J'aime pas"}
         </button>
     )

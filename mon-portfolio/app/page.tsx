@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Bouton from "@/components/bouton"
 import Section from "@/components/section"
 import Hero from "@/components/hero"
@@ -52,19 +51,20 @@ export default function Accueil() {
           ))}
         </div>
 
-        <Bouton label="voir plus" href="/projet" variante="plein"></Bouton>
+        <Bouton label="voir plus" href="/projets" variante="plein"></Bouton>
       </Section>
 
       <div className="mt-16">
-        <Bouton label="voir les projets" href="/projet" variante="contour">Voir tous les projets</Bouton>
+        <Bouton label="voir les projets" href="/projets" variante="contour" />
       </div>
 
       {QUESTIONS.map((question) =>
         <Accordeon
           key={question.id}
           question={question.question}
-          children={question.children}
-        />
+        >
+          {question.children}
+        </Accordeon>
       )}
 
     </main>

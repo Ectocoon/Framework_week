@@ -1,4 +1,4 @@
-import Bouton from "./components/bouton"
+import Bouton from "./bouton"
 
 export default function Accueil() {
     return (
