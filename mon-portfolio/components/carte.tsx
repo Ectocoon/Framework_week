@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import BoutonJaime from "./bouton-jaime"
 import ListeTags from "./liste-tags"
 import type { Projet } from "@/data/projets"
 
@@ -30,9 +29,6 @@ export default function Carte({ projet }: Props) {
                 <p className="mt-2 text-sm text-neutral-500">{projet.resume}</p>
                 <div className="mt-3">
                     <ListeTags tags={projet.tags} />
-                </div>
-                <div className="mt-4">
-                    <BoutonJaime label="J'aime" href="#" variante="plein" />
                 </div>
             </div>
         </article>
