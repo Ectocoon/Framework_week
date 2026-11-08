@@ -3,19 +3,7 @@ import Section from "@/components/section"
 import Hero from "@/components/hero"
 import Carte from "@/components/carte"
 import Accordeon from "@/components/accordeon"
-
-type Projet = {
-  id: number,
-  titre: string,
-  resume: string,
-  categorie: string
-}
-
-const PROJETS: Projet[] = [
-  { id: 1, titre: "Brasserie Noue", resume: "identité visuelle", categorie: "marque" },
-  { id: 2, titre: "Brasserie baba", resume: "identité visu", categorie: "marque" },
-  { id: 3, titre: "Brasserie nana", resume: "identité visuelle", categorie: "marque" }
-]
+import { PROJETS } from "@/data/projets"
 
 type Questions = {
   id: number,
@@ -41,13 +29,8 @@ export default function Accueil() {
       <Section titre="Nos projets">
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {PROJETS.map((projet) => (
-            <Carte
-              key={projet.id}
-              titre={projet.titre}
-              categorie={projet.categorie}
-              resume={projet.resume}
-            />
+          {PROJETS.slice(0, 3).map((projet) => (
+            <Carte key={projet.slug} projet={projet} />
           ))}
         </div>
 
