@@ -19,7 +19,7 @@ const QUESTIONS: Questions[] = [
 
 export default function Accueil() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
+    <div>
 
       <Hero
         titre="Des images, Des jeux, des sites"
@@ -50,6 +50,6 @@ export default function Accueil() {
         </Accordeon>
       )}
 
-    </main>
+    </div>
   )
 }

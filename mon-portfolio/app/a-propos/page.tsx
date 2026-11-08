@@ -1,8 +1,8 @@
-export default function Acceuil() {
+export default function APropos() {
     return (
-        <main className="mx-auto max-w-3xl px-6 py-16">
+        <div>
             <h1 className="text-4xl text-green-500">A propos</h1>
             <p>Bonjour</p>
-        </main>
+        </div>
     )
 }
