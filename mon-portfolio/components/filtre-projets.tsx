@@ -24,14 +24,14 @@ export default function FiltreProjets({ projets }: Props) {
             <div className="mb-8 flex flex-wrap gap-3">
                 {categories.map((categorie) => {
                     const style = categorie === categorieActive
-                        ? "bg-foreground text-background"
-                        : "border border-neutral-600 text-neutral-400 hover:text-foreground"
+                        ? "bg-accent text-white"
+                        : "border border-bordure text-doux hover:border-accent hover:text-accent"
 
                     return (
                         <button
                             key={categorie}
                             onClick={() => setCategorieActive(categorie)}
-                            className={`rounded-full px-4 py-1 text-sm ${style}`}
+                            className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${style}`}
                         >
                             {categorie}
                         </button>

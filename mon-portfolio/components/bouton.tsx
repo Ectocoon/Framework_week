@@ -10,11 +10,11 @@ export default function Bouton({ label, href, variante = "plein" }: Props) {
 
     const style =
         variante === "plein"
-            ? "bg-foreground text-background" //la variante plein
-            : "border border-foreground text-foreground" //la variante contour
+            ? "bg-accent text-white hover:opacity-90" //la variante plein
+            : "border border-bordure hover:border-accent hover:text-accent" //la variante contour
 
     return (
-        <Link href={href} className={`inline-block rounded px-5 py-2 ${style}`}>
+        <Link href={href} className={`inline-block rounded-full px-6 py-2.5 text-sm font-medium transition ${style}`}>
             {label}
         </Link>
     )

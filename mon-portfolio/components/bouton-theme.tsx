@@ -26,7 +26,7 @@ export default function BoutonTheme() {
         <button
             onClick={changerTheme}
             aria-label="Changer de thème"
-            className="rounded-full border border-neutral-500 px-3 py-1 text-sm"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-bordure text-sm transition hover:border-accent hover:text-accent"
         >
             {icone}
         </button>

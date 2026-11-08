@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Le fond et les éléments (cartes, menu) ont des couleurs bien distinctes */
+:root {
+  --background: #eceef3;
+  --foreground: #171717;
+  --carte: #ffffff;
+  --bordure: #d9dce3;
+  --doux: #525252;
+  --accent: #6366f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-carte: var(--carte);
+  --color-bordure: var(--bordure);
+  --color-doux: var(--doux);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #17171c;
+    --foreground: #ededed;
+    --carte: #2f2f36;
+    --bordure: #42424b;
+    --doux: #a3a3a3;
+    --accent: #818cf8;
+  }
+}
+
+/* Thème choisi avec le bouton : prioritaire sur le thème du système */
+:root[data-theme="clair"] {
+  --background: #eceef3;
+  --foreground: #171717;
+  --carte: #ffffff;
+  --bordure: #d9dce3;
+  --doux: #525252;
+  --accent: #6366f1;
+}
+
+:root[data-theme="sombre"] {
+  --background: #17171c;
+  --foreground: #ededed;
+  --carte: #2f2f36;
+  --bordure: #42424b;
+  --doux: #a3a3a3;
+  --accent: #818cf8;
+}
+
+body {
+  /* Lueur couleur accent en haut de la page, par-dessus la couleur de fond */
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, color-mix(in srgb, var(--accent) 22%, transparent), transparent) no-repeat,
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
